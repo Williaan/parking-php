@@ -1,0 +1,96 @@
+@use 'sass:color'
+@use '../0-base/variables'
+@import 'mixins-layout-create'
+@import '../0-base/mobile'
+
+    
+.main-title
+    font-size: 35px
+    text-align: center  
+    margin-top: 35px
+    color: variables.$text-color-patters
+
+    span
+        color: variables.$primary-color
+
+.table
+    @include center-content()
+    margin-top: 50px
+    max-width: 1170px
+    flex-wrap: wrap
+        
+
+.container-thead
+    background-color: variables.$primary-color
+    padding: 15px
+    width: 100%
+    
+
+    .container-tr
+        display: flex
+        align-items: center
+        justify-content: space-around
+       
+        th
+            color: ie-hex-str(variables.$text-color)
+            width: 100%
+            text-align: center
+            
+
+.container-tbody
+    padding: 13px
+    border-bottom: 1px solid variables.$text-color-patters
+
+    
+    .tr-tbody
+        max-width: 100px
+        text-align: center
+        margin-right: 30px
+
+
+    td
+        width: 290px
+        font-size: 18px
+        color: variables.$text-color-patters
+        padding: 10px
+
+        @include mobile()
+            margin-left: 1px
+            max-width: 85px
+
+
+    .actions
+        display: flex
+        justify-content: center
+        width: 200px
+
+        #view
+            color: variables.$color-actions
+            
+        
+        #edit
+            color: variables.$primary-color
+            margin-left: 5px
+            margin-right: 5px
+            
+        
+        #delete
+            color: variables.$color-actions-del            
+            font-size: 17px
+            cursor: pointer
+        
+
+
+
+
+.container-paragrafo-index
+    padding: 20px
+    font-size: 18px
+
+    #paragrafo-index
+        font-weight: 700
+        color: variables.$text-color-patters
+        margin-top: 30px
+        
+        a
+            color: variables.$primary-color

@@ -1,0 +1,59 @@
+@use '../0-base/variables'
+@use 'sass:color'
+    
+header
+    background-color: variables.$color-header
+    padding: 5px
+
+.container-header
+    max-width: variables.$width-patters
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin: 0 auto
+
+    .container-nav
+        display: flex
+
+        .menu
+            display: flex
+            align-items: center
+
+            li
+                margin-right: 15px
+                margin-left: 15px
+
+                a
+                    color: variables.$text-color
+                    font-weight: 500
+                    font-size: 19px
+                    transition: .5s ease-out
+
+                    &:hover
+                        color: variables.$text-color-patters
+
+.content-logo
+    width: 100px
+
+
+// SEARCH
+
+.container-search
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    input
+        border: none
+        padding: 9px 
+        border-radius: 10px 0px 0px 10px
+        outline: none
+
+    #lupa
+        
+        padding: 9px
+        background-color: variables.$primary-color
+        border-radius: 0px 10px 10px 0px
+        color: variables.$text-color
+        cursor: pointer
+    

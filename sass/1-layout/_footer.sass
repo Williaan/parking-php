@@ -1,0 +1,18 @@
+@use '../0-base/variables'
+@use 'sass:color'
+@import '../0-base/mobile'
+    
+.content-footer
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    top: 320px  
+    background-color: variables.$color-header
+    height: 80px
+
+    @include mobile()
+        top: 100px
+
+    .text-footer
+        color: variables.$text-color
