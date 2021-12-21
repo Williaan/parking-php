@@ -1,0 +1,41 @@
+@use '../0-base/variables'
+@import 'mixins-layout-create'
+
+    
+.container-form
+    @include center-content()
+    flex-direction: column    
+    max-width: 500px
+    margin-top: 15px
+
+    #form
+        width: 100%
+        padding: 10px
+
+        .content-inputs
+            margin: 10px
+            display: flex
+            flex-direction: column
+
+            label
+                font-size: 18px
+                font-weight: 500
+                color: variables.$color-black
+                margin: 3px
+
+            input
+                padding: 9px
+                border-radius: 5px
+                border: 1px solid variables.$text-color-patters
+                
+            input::placeholder
+                font-size: 14px
+                text-transform: capitalize
+
+        #observation
+            width: 97%
+            margin: 10px
+            padding: 10px
+            border-radius: 5px
+            border: 1px solid variables.$text-color-patters
+              
