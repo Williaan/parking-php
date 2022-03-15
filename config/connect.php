@@ -6,7 +6,7 @@
     $user = "root";
     $password = "admin";
 
-
+    global $connect;
 
     try {
         //Conexão com Banco de Dados

@@ -14,7 +14,7 @@
         $color = $_POST["color"];
         $observation = $_POST["observation"];
 
-        $stmt = $connect->prepare("UPDATE registers SET name=:name, phone=:phone, plaque=:plaque, model=:model, color=:color, observation=:observation WHERE id=:id" );
+        $stmt = $connect->prepare("UPDATE registers SET name =:name, phone =:phone, plaque =:plaque, model =:model, color=:color, observation  =:observation WHERE id =:id" );
        
         $stmt->bindParam(":id", $id);
         $stmt->bindParam(":name", $name);
