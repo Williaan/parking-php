@@ -22,7 +22,7 @@
             </div>
             <nav class="container-nav">
                 <ul class="menu">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index2.php">Home</a></li>
                     <li><a href="create.php">Cadastrar</a></li>
                 </ul>
             </nav>
