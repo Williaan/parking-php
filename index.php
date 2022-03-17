@@ -1,51 +1,28 @@
-<?php
-    include_once("templates/header.php");
-    include_once("config/process.php");
-
-?>
-    <h1 class="main-title">Estacionamento <span>BR</span></h1>
-    <?php if(count($allRegister)): ?>
-        <table class="table">
-            <thead class="container-thead">
-                <tr class="container-tr">
-                    <th>#</th>
-                    <th>Cliente</th>
-                    <th>Veículo</th>
-                    <th>Placa</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody class="container-tbody">
-            <?php foreach($allRegister as $register): ?>   
-
-                <tr class="tr-tbody">
-                    <td><?= $register["id"] ?></td>
-                    <td><?= $register["name"] ?></td>
-                    <td><?= $register["model"] ?></td>
-                    <td><?= $register["plaque"] ?></td>
-                    
-                    <td class="actions">
-                        <a href=<?= "read.php?id=".$register["id"]?> id="view"><i class="fas fa-eye check-icon" title="View"></i></a>
-                        <a href=<?= "update.php?id=".$register["id"] ?> id="edit"><i class="far fa-edit edit-icon" title="Edit"></i></a>
-                        <form action="config/process.php" method="POST">                    
-                            <button type="submit" id="delete" name="id" value="<?= $register["id"] ?>"><i class="fa fa-trash" title="Delete"></i></button>
-                        </form>
-                    </td>
-                </tr>           
-
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-
-        <div class="container-paragrafo-index">
-            <p id="paragrafo-index">Ainda não há cadastros, <a href="create.php">Clique aqui para cadastrar</a></p>
-        </div>      
-
-    <?php endif; ?>
-                 
-
-
-<?php
-    include_once("templates/footer.php");
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylelogin.css" media="all">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Área restrita</h1>
+        <form action="logar.php" method="POST">
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Email" require="require">
+            </div>
+            <div>
+                <label for="pass">Senha:</label>
+                <input type="password" name="pass" id="pass" placeholder="Senha" require="require">
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+   <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
